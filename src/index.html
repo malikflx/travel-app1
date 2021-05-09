@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malik Felix | Weather Journal App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="main-title">Weather Journal App</h1>
+    </header>
+    <div class='input-container'>
+      <p>Enter your zip code</p>
+      <input type="text" id="zip" placeholder="enter zip code here" name="zip"><br>
+      <h3>Let us know what you're feeling today!</h3>
+      <textarea id='feelings'></textarea><br>
+      <!-- <input id="country" type="text" placeholder="country"> -->
+      <button id="generate">Generate</button>
+    </div>
+
+
+    <div id="entryHolder">
+      <div class="entry-item" id="date"></div>
+      <div class="entry-item" id="temp"></div>
+      <div class="entry-item" id="content"></div>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
