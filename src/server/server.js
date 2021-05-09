@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 // Initialize the main project folder
-app.use(express.static('src'));
+app.use(express.static('dist'));
 // Spin up the server
 const port = 5000;
 const server = app.listen(port, listening);
