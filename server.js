@@ -1,5 +1,3 @@
-const dotenv = require('dotenv');
-dotenv.config();
 const fetch = require('node-fetch');
 
 // Setup empty JS object to act as endpoint for all routes
@@ -21,14 +19,11 @@ app.use(cors());
 app.use(express.static('dist'));
 // Spin up the server
 const port = 5000;
-const server = app.listen(port, function () {
-  console.log(`Travel App running on localhost: ${port}!`)
-});
-// function listening() {
-//   console.log('Server Connected!')
-//   console.log(`running on localhost: ${port}`);
-// };
-
+const server = app.listen(port, listening);
+function listening() {
+  console.log('Server Connected!')
+  console.log(`running on localhost: ${port}`);
+};
 
 // Callback to debug
 
@@ -44,8 +39,6 @@ const data = [];
 app.post('/addData', addData);
 
 function addData(req, res) {
-  const baseURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
-  const apiKey = process.env.API_KEY;
   let data = req.body;
 
   console.log('your data ', data);

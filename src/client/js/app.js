@@ -1,6 +1,10 @@
+// const dotenv = require('dotenv');
+// dotenv.config();
+import { } from 'dotenv/config';
+import fetch from 'node-fetch';
 // Personal API Key for OpenWeatherMap API
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
-const apiKey = '&appid=5aa24580971dd5a746c4ac39f1b5270e&units=imperial';
+const apiKey = process.env.API_KEY;
 
 // Event listener to add function to HTML DOM element
 document.getElementById('generate').addEventListener('click', performAction);
@@ -80,3 +84,5 @@ const retrieveData = async (url = '') => {
     console.log('error', error);
   }
 }
+
+export { performAction }
